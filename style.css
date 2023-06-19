@@ -18,6 +18,10 @@
     src: url("fonts/MinecraftBoldItalic-1y1e.otf") format("opentype")
 }
 
+@font-face {
+    font-family: "EnchantingTable";
+    src: url("fonts/minecraft-enchantment.ttf") format("truetype")
+}
 
 *{
     margin: 0;
@@ -31,41 +35,103 @@ main{
     width: 100vw;
     height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clicks-div{
-    font-size: 30px;
+    font-size: 40px;
     font-family: "Minecraft", sans-serif;
     color: white;
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 200px;
+}
+
+.main-image-div{
+    position: relative;
 }
 
 #main-image{
     width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     transform-origin: center;
     transition: all ease .1s;
+
+    -webkit-user-drag: none; /* Safari/Chrome */
+    -khtml-user-drag: none; /* Konqueror */
+    -moz-user-drag: none; /* Firefox */
+    -o-user-drag: none; /* Opera */
+    user-drag: none; /* Generic */
+  
+    -webkit-user-select: none; /* Safari/Chrome */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -o-user-select: none; /* Opera */
+    user-select: none; /* Generic */
 }
 
 #main-image:hover{
     cursor: pointer;
 }
 
-/* .click{
-    animation: click .1s
+.number {
+    position: absolute;
+    top: 100px;
+    font-size: 50px;
+    font-family: "Minecraft", sans-serif;
+    color: white;
+    visibility: hidden;
+    animation: numbFloat .5s;
 }
 
-@keyframes click{
+@keyframes numbFloat {
+    0%{
+        visibility: visible;
+    }
     50%{
-       scale: 1.1
+        opacity: 100%;
     }
-
     100%{
-        scale: 1
+        transform: translateY(-250px);
+        opacity: 0;
+        visibility: hidden;
     }
-} */
+}
+
+.shop-div{
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    width: 300px;
+    height: 50px;
+}
+
+.shop-button{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.744);
+}
+
+.font-change-button{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.744);
+}
+
+.shop-button img{
+    width: 80px;
+}
+
+.font-change-button img{
+    width: 80px;
+}
+
+button:hover{
+    cursor: pointer;
+}
