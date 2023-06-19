@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("fonts/MinecraftRegular-Bmg3.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MinecraftItalic";
+    src: url("fonts/MinecraftItalic-R8Mo.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "MinecraftBold";
+    src: url("fonts/MinecraftBold-nMK1.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "MinecraftBoldItalic";
+    src: url("fonts/MinecraftBoldItalic-1y1e.otf") format("opentype")
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-image: url("./images/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.clicks-div{
+    font-size: 30px;
+    font-family: "Minecraft", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+#main-image{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    transition: all ease .1s;
+}
+
+#main-image:hover{
+    cursor: pointer;
+}
+
+/* .click{
+    animation: click .1s
+}
+
+@keyframes click{
+    50%{
+       scale: 1.1
+    }
+
+    100%{
+        scale: 1
+    }
+} */
