@@ -150,6 +150,19 @@ main{
     }
 }
 
+.spin{
+    animation: spin .5s;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .font-change-button{
     width: 100px;
     height: 100px;
@@ -177,6 +190,7 @@ button:hover{
     position: absolute;
     z-index: 20;
     right: -400px;
+    top: 170px;
     transition: all 1s ease;
 }
 

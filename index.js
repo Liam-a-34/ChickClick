@@ -1,5 +1,6 @@
 const pop = new Audio("/sounds/pop.wav")
 const achievement = new Audio("/sounds/achievement.wav")
+const pageTurn = new Audio("/sounds/page.wav")
 pop.volume = 0.5
 let clicks = 0;
 let multiplier = 1
@@ -87,6 +88,8 @@ $("#main-image").click(function(){
 
 $(".font-change-button").click(function(){
 
+    $(".font-change-button").children("img").toggleClass("spin")
+
         if (localStorage.getItem("font") == null) {
           $(".clicks-div").css("font-family", "EnchantingTable");
           localStorage.setItem("font", "Enchanting");
@@ -95,8 +98,20 @@ $(".font-change-button").click(function(){
           localStorage.removeItem("font");
         }
 
+    setTimeout(function(){
+        $(".font-change-button").children("img").toggleClass("spin") 
+    },500)
+
 })
 
 $(".shop-button").click(function(){
+
+    pageTurn.play()
     $(".purchase-div").toggleClass("shop-expand")
+
+    $(".shop-button").children("img").toggleClass("spin")
+
+    setTimeout(function(){
+        $(".shop-button").children("img").toggleClass("spin") 
+    },500)
 })
